@@ -1,0 +1,30 @@
+{
+  "name": "MediCare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kopaljain03/MediCare.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kopaljain03/MediCare/issues"
+  },
+  "homepage": "https://github.com/kopaljain03/MediCare#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.13"
+  }
+}

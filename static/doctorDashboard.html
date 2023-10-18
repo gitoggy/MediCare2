@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediCare</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./doctorDashboard.css" />
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="sidebar-container">
+      <div class="sidebar-logo"><h3 style="color: azure">MediCare</h3></div>
+      <ul class="sidebar-navigation">
+        <li>
+          <a style="text-decoration: none" href="#">
+            <i class="fa fa-home" aria-hidden="true"></i>Home</a
+          >
+        </li>
+        <li>
+          <a style="text-decoration: none" href="#">
+            <i class="fa fa-comment-medical" aria-hidden="true"></i>Chats</a
+          >
+        </li>
+        <li>
+          <a style="text-decoration: none" href="#">
+            <i class="fa fa-hospital-user" aria-hidden="true"></i>Requests
+          </a>
+        </li>
+        <li>
+          <a style="text-decoration: none" href="#">
+            <i class="fa fa-calendar-check" aria-hidden="true"></i>Appointments
+          </a>
+        </li>
+        <li>
+          <a style="text-decoration: none" href="#">
+            <i class="fa fa-notes-medical" aria-hidden="true"></i>Notes
+          </a>
+        </li>
+        <li>
+          <a style="text-decoration: none" href="#">
+            <i class="fa fa-cog" aria-hidden="true"></i>Settings
+          </a>
+        </li>
+        <li>
+          <a style="text-decoration: none" href="#">
+            <i class="fa fa-sign-out-alt" aria-hidden="true"></i>Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content-container">
+      <div class="container-fluid">
+        <!-- Main component for a primary marketing message or call to action -->
+        <h1>Hello, Doctor!</h1>
+        <div class="jumbotron">
+          <h1>Upcoming Appointments</h1>
+          <p>
+            1. Video Call with XYZ <br />
+            2. Clinic appointment with ABC <br />
+            3. Chat with EFG <br />
+          </p>
+        </div>
+        <h1>Your patients:</h1>
+        <div class="card w-75">
+          <div class="card-body">
+            <h5 class="card-title">Name</h5>
+            <p class="card-text">
+              Time: 12:00 <br />
+              Mode Of Appointment: Online/Offline <br />
+            </p>
+            <a href="#" class="btn btn-primary">Go to Appointment</a>
+            <a href="#" class="btn btn-primary">Mark As Done</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

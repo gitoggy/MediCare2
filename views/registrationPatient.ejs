@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicare</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <style>
+        .form1{
+            margin-left: 5em;
+            margin-top: 2em;
+
+        }
+        .heading{
+            margin-left: 3em;
+            margin-top: 2em;
+            padding-bottom: 0em;
+        }
+    </style>
+</head>
+<body>
+  <%- include('navbarBeforeLogin.ejs') %> 
+    <div class="heading">
+        <h2>Personal Details</h2>
+    </div>
+    <div class="form1">
+    <form method="post" action="/patient/register">
+        <div class="col-sm-7">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="name" class="form-control" id="exampleInputname1" aria-describedby="emailHelp" name="name">
+        </div>
+        <div class="col-sm-7">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="col-sm-7">
+          <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+          <input type="mobile" class="form-control" id="exampleInputmobile1" aria-describedby="emailHelp" name="phone">
+        </div>
+        <div class="col-sm-7">
+          <label for="exampleInputEmail1" class="form-label">Address</label>
+          <input type="address" class="form-control" id="exampleInputaddress1" aria-describedby="emailHelp" name="address">
+        </div>
+        <div class="col-sm-7">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+        </div>
+        <br>
+      
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      </div>
+</body>
+</html>

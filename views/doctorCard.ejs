@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Card</title>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+  </head>
+  <body>
+    <%- include('navbarAfterLogin.ejs') %> 
+    <div class="container">
+      <br />
+      <br />
+      <% for(var i=0 ; i<doctor.length ; i++) { %> 
+      <div class="card mb-3" style="width: 1200px">
+        <div class="row no-gutters">
+          <div class="col-md-3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDGQO5-8CPA9Hzl5_wLkAf6VtlMw52q7IwRw&usqp=CAU" alt="Profile pic" />
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+
+              <h5 class="card-title">Dr.<%= doctor[i].name  %></h5>fdf
+              <p class="card-text"><%= doctor[i].specialization  %></p>
+              <p class="card-text"><%= doctor[i].experience  %></p>
+              <p class="card-text">Rating</p>
+              <p class="card-text">Available</p>
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-body">
+              <p class="card-text"><%= location[i] %> km </p>
+
+              <p class="card-text"><%= doctor[i].education  %></p>
+
+              <p class="card-text">Appointment</p>
+              <button type="button" class="btn btn-primary" ><a style="color:white" href="/patient/find/<%= doctor[i].id  %>"> Online </a></button>
+              <button type="button" class="btn btn-primary"><a style="color:white" href="/patient/find/<%= doctor[i].id  %>"> Offline </a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html> */

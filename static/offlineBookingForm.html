@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        .form3{
+            margin-left: 5em;
+            margin-top: 2em;
+            padding-top: 0em;
+
+        }
+        .heading{
+            margin-left: 3em;
+            margin-top: 2em;
+            padding-bottom: 0em;
+        }
+       .form-control{
+           margin-top: 1em;
+           
+       }
+        .form-symptoms{
+            margin-top: 2em;
+        }
+        .input-group-text{
+            margin-top: 1.18em;
+        }
+    </style>
+</head>
+<body>
+    <div class="form3">
+
+    <form action="/patient/book" method="post">
+        <div class="col-sm-7">
+        <div class="col-sm-7">
+          <label for="exampleInputEmail1" class="form-label">Age</label>
+          <input type="Age" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          <!-- <div id="Age" class="form-text">We'll never share your email with anyone else.</div> -->
+        </div>
+        <div class="col-sm-7">
+          <label for="exampleInputEmail1" class="form-label">Date of the Appointment</label>
+          <input type="date" class="form-control" id="exampleInputmobile1" aria-describedby="emailHelp">
+        </div>
+        <div class="col-sm-7">
+          <label for="exampleInputEmail1" class="form-label">Time of the Appointment</label>
+          <input type="time" class="form-control" id="exampleInputmobile1" aria-describedby="emailHelp">
+        </div>
+        <div class="col-sm-7">
+          <label for="exampleInputEmail1" class="form-label">Gender</label>
+          <input type="address" class="form-control" id="exampleInputaddress1" aria-describedby="emailHelp">
+          <!-- <div id="addressHelp" class="form-text">Please enter address of clinic or hospital.</div> -->
+        </div>
+        <div class="symptoms">
+        <label for="exampleInputSymptoms1" class="form-symptoms">Symptoms</label>
+        <div class="form-floating">
+            
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px; width: 700px;"></textarea>
+            <label for="floatingTextarea2">symptoms</label>
+            <div id="symptoms" class="form-text">Please write your symptoms here.</div>
+          </div>
+        </div>
+        <div class="input-group mb-3 col-sm-4">
+            <input type="file" class="form-control" id="inputGroupFile02">
+            <label class="input-group-text" for="inputGroupFile02">Upload any previous prescriptions or reports</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          
+    </div>
+
+    
+</body>
+</html>

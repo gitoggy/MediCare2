@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/dashboard.css">
+  <link rel="stylesheet" href="/dashboard1.css">
+  <link rel="stylesheet" href="/bootstrap.min.css">
+  <script src="/dashboard.js"></script>
+</head>
+
+<body>
+  <%- include('navbarAfterLogin.ejs') %>
+    <div class="page-wrapper chiller-theme toggled">
+      <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+        <i class="fas fa-bars"></i>
+      </a>
+      <nav id="sidebar" class="sidebar-wrapper">
+        <div class="sidebar-content">
+          <div class="sidebar-brand">
+            <a href="#">sidebar</a>
+            <div id="close-sidebar">
+              <i class="fas fa-times"></i>
+            </div>
+          </div>
+          <div class="sidebar-header">
+            <div class="user-pic">
+              <img class="img-responsive img-rounded"
+                src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                alt="User picture">
+            </div>
+            <div class="user-info">
+              <span class="user-name">
+                <%= appointment.patient_name%>
+              </span>
+              <span class="user-role">
+                <%= appointment.patient_email %>
+              </span>
+              <span class="user-status">
+                <i class="fa fa-circle"></i>
+                <span>Online</span>
+              </span>
+            </div>
+          </div>
+          <!-- sidebar-header  -->
+          <div class="sidebar-menu">
+            <ul>
+              <li class="header-menu">
+                <span>General</span>
+              </li>
+              <li class="sidebar-dropdown">
+                <a href="#">
+                  <i class="fa fa-tachometer-alt"></i>
+                  <span>Dashboard</span>
+                  <span class="badge badge-pill badge-warning">New</span>
+                </a>
+                <div class="sidebar-submenu">
+                  <ul>
+                    <li>
+
+                    </li>
+                    <li>
+                      <a href="#">Dashboard 2</a>
+                    </li>
+                    <li>
+                      <a href="#">Dashboard 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="sidebar-dropdown">
+                <a href="/patient/appointments">
+                  <i class="fa fa-shopping-cart"></i>
+                  <span>Appointments</span>
+                  <span class="badge badge-pill badge-danger">3</span>
+                </a>
+                <div class="sidebar-submenu">
+                  <ul>
+                    <li>
+                      <a href="#">Products
+
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">Orders</a>
+                    </li>
+                    <li>
+                      <a href="#">Credit cart</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="sidebar-dropdown">
+                <a href="#">
+                  <i class="far fa-gem"></i>
+                  <span>Chats</span>
+                </a>
+
+              </li>
+              <li class="sidebar-dropdown">
+                <a href="#">
+                  <i class="fa fa-chart-line"></i>
+                  <span>Medical History</span>
+                </a>
+
+              </li>
+              <li class="sidebar-dropdown">
+                <a href="#">
+                  <i class="fa fa-globe"></i>
+                  <span>My Profile</span>
+                </a>
+
+              </li>
+              <li class="header-menu">
+                <span>Extra</span>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-book"></i>
+                  <span>Logout</span>
+                  <span class="badge badge-pill badge-primary"></span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-calendar"></i>
+                  <span>Calendar</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-folder"></i>
+                  <span>Examples</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- sidebar-menu  -->
+        </div>
+        <!-- sidebar-content  -->
+        <div class="sidebar-footer">
+          <a href="#">
+            <i class="fa fa-bell"></i>
+            <span class="badge badge-pill badge-warning notification">3</span>
+          </a>
+          <a href="#">
+            <i class="fa fa-envelope"></i>
+            <span class="badge badge-pill badge-success notification">7</span>
+          </a>
+          <a href="#">
+            <i class="fa fa-cog"></i>
+            <span class="badge-sonar"></span>
+          </a>
+          <a href="#">
+            <i class="fa fa-power-off"></i>
+          </a>
+        </div>
+      </nav>
+      <!-- sidebar-wrapper  -->
+      <main class="page-content">
+        <div class="container">
+          Hello, Your appointment has been booked with 
+          <h1>Dr.<%= appointment.doctor_name %>
+          </h1>
+          <hr>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <p>How are you feeling today?</p>
+
+            </div>
+
+            <div class="form-group col-md-12">
+              <div class="alert alert-success" role="alert">
+
+              </div>
+              <ul style="font-size: 20px;">
+                <li>Appointment Date : <%= appointment.date %></li>
+                <li>Appointment Time : <%= appointment.time %></li>
+              </ul>
+            </div>
+          </div>
+      
+          <hr>
+         
+          </footer>
+          <div class="card mb-3" style="width: 1200px">
+            <div class="row no-gutters">
+              <!-- <div class="col-md-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDGQO5-8CPA9Hzl5_wLkAf6VtlMw52q7IwRw&usqp=CAU" alt="Profile pic" />
+              </div> -->
+              <div class="col-md-4">
+                <div class="card-body">
+                   <h5>View Your Prescriptions</h5> 
+                  <h4 class="card-title"> Dr.<%= appointment.doctor_name  %></h4>
+                  <p class="card-text">Date of appointment: <%= appointment.date  %></p>
+             
+                  
+                  
+    
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card-body">
+                  
+                  <br>
+                  <h4 class="card-title"> Dr.<%= appointment.doctor_name  %></h4>
+                  <p class="card-text">Date of appointment: <%= appointment.date  %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+      <!-- page-content" -->
+    </div>
+    <!-- page-wrapper -->
+</body>
+
+</html>
